@@ -27,7 +27,7 @@ public class SubService {
      * Breaks Retryable. If moved to a different class it works, if static it works.
      */
     @Component("uploadRetryListener")
-    public class UploadRetryListener extends RetryListenerSupport {
+    public static class UploadRetryListener extends RetryListenerSupport {
         @Override
         public <T, E extends Throwable> boolean open(RetryContext context, RetryCallback<T, E> callback) {
             System.out.println("open");
